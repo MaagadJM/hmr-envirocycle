@@ -1,8 +1,8 @@
-import heroImg from '../assets/banners/landing-page-banner.png'
+import heroImg from '../assets/banners/main-section.png'
 
 export default function Hero() {
   return (
-    <section className="relative w-full overflow-hidden mt-16">
+    <section className="relative w-full overflow-hidden mt-20">
       {/* Hero image */}
       <img
         src={heroImg}
@@ -12,15 +12,21 @@ export default function Hero() {
 
       {/* Text overlay — 2-col grid */}
       <div className="absolute inset-0 flex items-center px-12 md:px-20 lg:px-28">
-        <div className="w-full grid grid-cols-2 gap-8">
+        <div className="w-full text-center grid grid-cols-2">
           {/* Left column — text */}
-          <div className="flex items-center justify-center">
-            <h1 className="text-white font-bold text-4xl md:text-5xl leading-tight drop-shadow-lg text-center">
-              Building a Circular<br />Economy for Assets
-            </h1>
+          <div className="text-white font-light text-4xl md:text-5xl leading-none drop-shadow-lg">
+            <div>
+              Building a Circular
+              {/* <h1>
+                Economy for Assets
+              </h1> */}
+            </div>
+            <div className="absolute left-48.5">
+              Economy for Assets
+            </div>
           </div>
           {/* Right column — empty / reserved */}
-          <div />
+          <div ></div>
         </div>
       </div>
     </section>

@@ -7,11 +7,11 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0e1a]/95 backdrop-blur-sm border-b border-[#1e2d3d]">
-      <div className="w-full px-6 grid grid-cols-3 items-center h-16">
+      <div className="w-full px-6 grid grid-cols-3 items-center h-20">
         {/* Logo */}
         <div className="flex items-center justify-center">
           <a href="#">
-            <img src={logo} alt="Envirocycle" className="h-9 w-auto" />
+            <img src={logo} alt="Envirocycle" className="h-auto w-60" />
           </a>
         </div>
 
