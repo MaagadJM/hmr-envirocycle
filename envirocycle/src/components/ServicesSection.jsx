@@ -39,11 +39,26 @@ export default function ServicesSection() {
   const next = () => setCurrent((c) => Math.min(services.length - visible, c + 1))
 
   return (
-    <section className="bg-white dark:bg-[#0a0e1a] pb-12 px-12 md:px-20 lg:px-28 flex flex-col items-center">
+    <section className="bg-white dark:bg-[#0a0e1a] pb-12 px-4 sm:px-8 md:px-20 lg:px-28 flex flex-col items-center">
       <div className="w-full max-w-7xl">
         <h2 className="text-2xl font-light tracking-tighter text-gray-900 dark:text-white py-8">Services</h2>
 
-        <div className="relative flex items-center gap-4">
+        {/* Mobile: 2-col grid */}
+        <div className="grid grid-cols-2 gap-3 md:hidden">
+          {services.map((s, i) => (
+            <div
+              key={i}
+              className="bg-gray-100 dark:bg-[#0b1120] border border-gray-300 dark:border-gray-500 rounded-2xl flex flex-col items-center gap-3 text-center p-4 hover:border-[#6abf4b]/60 transition-colors"
+            >
+              <img src={s.icon} alt={s.title} className="w-16 h-16 object-contain invert dark:invert-0" />
+              <h3 className="text-xs font-bold leading-snug tracking-wide" style={{ color: s.color }}>{s.title}</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-xs leading-relaxed">{s.description}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop: slider */}
+        <div className="hidden md:flex items-center gap-4">
           {/* Prev */}
           <button
             onClick={prev}

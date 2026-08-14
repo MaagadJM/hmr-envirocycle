@@ -2,14 +2,14 @@ import inquiryImg from '../assets/images/inquiry/inquiry-section.png'
 
 export default function CTASection() {
   return (
-    <section className="bg-white dark:bg-[#0a0e1a] py-16 px-12 md:px-20 lg:px-28">
+    <section className="bg-white dark:bg-[#0a0e1a] py-16 px-4 sm:px-8 md:px-20 lg:px-28">
       <div className="max-w-7xl mx-auto">
         <div className="relative rounded-2xl overflow-hidden border border-gray-400 min-h-[180px] flex items-center">
           {/* Background image */}
           <img src={inquiryImg} alt="" className="absolute inset-0 w-full h-full object-cover" />
 
           {/* Content */}
-          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full px-10 py-10 gap-6">
+          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full px-6 py-6 md:px-10 md:py-10 gap-6">
             <div className="max-w-lg">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
                 Ready To Make an Impact?

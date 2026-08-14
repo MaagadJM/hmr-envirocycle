@@ -38,9 +38,9 @@ export default function SustainabilitySection() {
   const slide = slides[current]
 
   return (
-    <section className="bg-gray-200 dark:bg-[#0d1220] py-16 px-12 md:px-20 lg:px-28">
+    <section className="bg-gray-200 dark:bg-[#0d1220] py-16 px-4 sm:px-8 md:px-20 lg:px-28">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-2 gap-8 min-h-[280px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 min-h-[280px]">
           {/* Text */}
           <div className="flex flex-col justify-center">
             <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{slide.title}</h2>
@@ -54,7 +54,7 @@ export default function SustainabilitySection() {
           </div>
 
           {/* Image */}
-          <div className="w-full h-80 rounded-xl overflow-hidden border border-gray-300 dark:border-[#1e2d3d]">
+          <div className="w-full h-52 md:h-80 rounded-xl overflow-hidden border border-gray-300 dark:border-[#1e2d3d]">
             {slide.img
               ? <img src={slide.img} alt={slide.title} className="w-full h-full object-cover" />
               : <div className="w-full h-full bg-[#0f1623] flex items-center justify-center text-gray-600 text-xs">Event Photo</div>

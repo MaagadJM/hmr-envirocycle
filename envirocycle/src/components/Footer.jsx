@@ -5,7 +5,7 @@ export default function Footer() {
   const links = ['About Us', 'Services', 'Industries', 'Insights', 'Career']
 
   return (
-    <footer className="bg-gray-50 dark:bg-[#0a0e1a] border-t border-gray-200 dark:border-[#1e2d3d] py-12 px-12 md:px-20 lg:px-28">
+    <footer className="bg-gray-50 dark:bg-[#0a0e1a] border-t border-gray-200 dark:border-[#1e2d3d] py-10 px-4 sm:px-8 md:px-20 lg:px-28">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Left */}
         <div>
@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
 
         {/* Right — Contact */}
-        <div className="flex flex-col gap-4 md:items-end">
+        <div className="flex flex-col gap-4 md:items-end md:text-right">
           <a
             href="mailto:info@envirocycle-inc.com"
             className="flex items-center gap-3 text-gray-500 dark:text-gray-400 hover:text-[#6abf4b] transition-colors text-sm"

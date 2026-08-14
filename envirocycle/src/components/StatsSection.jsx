@@ -37,7 +37,7 @@ export default function StatsSection() {
   const next = () => setCurrent((c) => Math.min(stats.length - visible, c + 1))
 
   return (
-    <section className="relative bg-white dark:bg-[#0a0e1a] py-16 px-12 md:px-20 lg:px-28 overflow-hidden">
+    <section className="relative bg-white dark:bg-[#0a0e1a] py-16 px-4 sm:px-8 md:px-20 lg:px-28 overflow-hidden">
       <img src={bgImgLight} alt="" className="absolute inset-0 w-full h-full object-cover dark:hidden" />
       <img src={bgImg} alt="" className="absolute inset-0 w-full h-full object-cover hidden dark:block" />
       <div className="relative z-10 max-w-7xl mx-auto">
@@ -46,7 +46,19 @@ export default function StatsSection() {
           <p className="text-[#86a73e] font-medium mt-1">Creating Measurable Environmental Impact</p>
         </div>
 
-        <div className="relative flex items-center gap-4">
+        {/* Mobile: 2-col grid */}
+        <div className="grid grid-cols-2 gap-4 md:hidden">
+          {stats.map((s, i) => (
+            <div key={i} className="flex flex-col gap-2 items-center text-center p-3">
+              <img src={s.img} alt={s.value} className="w-20 h-20 object-contain mx-auto" />
+              <div className="text-[#86a73e] font-bold text-base">{s.value}</div>
+              <p className="text-gray-600 dark:text-gray-400 text-xs leading-relaxed">{s.description}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop: slider */}
+        <div className="hidden md:flex items-center gap-4">
           {/* Prev */}
           <button
             onClick={prev}

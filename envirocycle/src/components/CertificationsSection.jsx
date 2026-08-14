@@ -21,11 +21,24 @@ export default function CertificationsSection() {
   const next = () => setCurrent((c) => Math.min(certs.length - visible, c + 1))
 
   return (
-    <section className="bg-white dark:bg-[#0d1220] py-16 px-12 md:px-20 lg:px-28">
+    <section className="bg-white dark:bg-[#0d1220] py-16 px-4 sm:px-8 md:px-20 lg:px-28">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-8">Certifications &amp; Compliances</h2>
 
-        <div className="relative flex items-center gap-4">
+        {/* Mobile: 2-col grid */}
+        <div className="grid grid-cols-2 gap-3 md:hidden">
+          {certs.map((c, i) => (
+            <div
+              key={i}
+              className={`bg-[#0f1623] border border-gray-400 rounded-xl p-4 flex items-center justify-center min-h-[100px] hover:border-[#6abf4b]/40 transition-colors${i === certs.length - 1 && certs.length % 2 !== 0 ? ' col-span-2 max-w-[50%] mx-auto w-full' : ''}`}
+            >
+              <img src={c.img} alt={c.label} className="w-full h-full object-contain" />
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop: slider */}
+        <div className="hidden md:flex items-center gap-4">
           {/* Prev */}
           <button
             onClick={prev}

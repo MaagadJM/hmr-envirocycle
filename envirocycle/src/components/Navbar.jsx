@@ -7,11 +7,11 @@ export default function Navbar({ darkMode, toggleDark }) {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-[#0a0e1a]/95 backdrop-blur-sm border-b border-gray-200 dark:border-[#1e2d3d]">
-      <div className="w-full px-6 grid grid-cols-3 items-center h-20">
+      <div className="w-full px-4 md:px-6 flex items-center justify-between h-20 md:grid md:grid-cols-3">
         {/* Logo */}
-        <div className="flex items-center justify-center">
+        <div className="flex items-center md:justify-center">
           <a href="#">
-            <img src={darkMode ? logoDark : logoLight} alt="Envirocycle" className="h-auto w-60" />
+            <img src={darkMode ? logoDark : logoLight} alt="Envirocycle" className="h-auto w-28 sm:w-36 md:w-52" />
           </a>
         </div>
 
@@ -29,7 +29,7 @@ export default function Navbar({ darkMode, toggleDark }) {
         </div>
 
         {/* Right side */}
-        <div className="flex items-center justify-center gap-4">
+        <div className="flex items-center gap-4 md:justify-center">
           {/* Search */}
           <div className="hidden md:flex items-center gap-2 bg-gray-50 dark:bg-[#0f1623] border border-gray-200 dark:border-[#1e2d3d] rounded-full px-4 py-1.5">
             <input
