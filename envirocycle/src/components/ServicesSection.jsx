@@ -39,9 +39,9 @@ export default function ServicesSection() {
   const next = () => setCurrent((c) => Math.min(services.length - visible, c + 1))
 
   return (
-    <section className="bg-[#0a0e1a] py-16 px-12 md:px-20 lg:px-28 flex flex-col items-center">
+    <section className="bg-[#0a0e1a] pt-32 pb-16 px-12 md:px-20 lg:px-28 flex flex-col items-center">
       <div className="w-full max-w-7xl">
-        <h2 className="text-2xl font-semibold text-white mb-8">Services</h2>
+        <h2 className="text-2xl font-light tracking-tighter text-white mb-8">Services</h2>
 
         <div className="relative flex items-center gap-4">
           {/* Prev */}
