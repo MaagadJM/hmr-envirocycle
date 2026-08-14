@@ -14,8 +14,8 @@ export default function Hero() {
       <div className="absolute inset-0 flex items-center px-12 md:px-20 lg:px-28">
         <div className="w-full text-center grid grid-cols-2">
           {/* Left column — text */}
-          <div className="text-white font-light text-4xl md:text-5xl leading-none drop-shadow-lg tracking-tighter">
-            <div>
+          <div className="text-white font-extralight text-4xl md:text-8xl leading-none drop-shadow-lg tracking-tighter">
+            <div className="absolute left-54 top-1/2 transform -translate-y-full">
               Building a Circular
               {/* <h1>
                 Economy for Assets
