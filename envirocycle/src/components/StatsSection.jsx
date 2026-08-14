@@ -59,13 +59,13 @@ export default function StatsSection() {
           {/* Cards */}
           <div className="flex-1 overflow-hidden">
             <div
-              className="flex gap-4 transition-transform duration-300"
+              className="flex divide-x-2 divide-[#1e2d3d] transition-transform duration-300"
               style={{ transform: `translateX(-${current * (100 / visible)}%)` }}
             >
               {stats.map((s, i) => (
                 <div
                   key={i}
-                  className="flex-shrink-0 w-[calc(25%-12px)] bg-[#0f1623] border border-[#1e2d3d] rounded-xl p-6 flex flex-col gap-3 items-center text-center hover:border-[#6abf4b]/30 transition-colors"
+                  className="flex-shrink-0 w-1/4 p-6 flex flex-col gap-3 items-center text-center"
                 >
                   <img src={s.img} alt={s.value} className="w-32 h-32 object-contain mx-auto" />
                   <div className="text-[#86a73e] font-bold text-lg">{s.value}</div>
@@ -81,7 +81,7 @@ export default function StatsSection() {
             disabled={current >= stats.length - visible}
             className="flex-shrink-0 w-10 h-10 rounded-full border border-[#1e2d3d] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#6abf4b] transition-colors disabled:opacity-30"
           >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>

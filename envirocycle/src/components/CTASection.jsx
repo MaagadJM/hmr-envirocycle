@@ -4,7 +4,7 @@ export default function CTASection() {
   return (
     <section className="bg-[#0a0e1a] py-16 px-12 md:px-20 lg:px-28">
       <div className="max-w-7xl mx-auto">
-        <div className="relative rounded-2xl overflow-hidden border border-[#1e2d3d] min-h-[180px] flex items-center">
+        <div className="relative rounded-2xl overflow-hidden border border-gray-400 min-h-[180px] flex items-center">
           {/* Background image */}
           <img src={inquiryImg} alt="" className="absolute inset-0 w-full h-full object-cover" />
 
