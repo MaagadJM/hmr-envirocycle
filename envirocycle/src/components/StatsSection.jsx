@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import bgImg from '../assets/images/environmental-impact/building-a-circular-future-background.png'
+import bgImgLight from '../assets/images/environmental-impact/building-a-circular-future-background-light.png'
 import img14000 from '../assets/images/environmental-impact/14,000 Tonnes.png'
 import img5228 from '../assets/images/environmental-impact/5,228 Tonnes.png'
 import img8000 from '../assets/images/environmental-impact/8,000 Tonnes.png'
@@ -36,11 +37,12 @@ export default function StatsSection() {
   const next = () => setCurrent((c) => Math.min(stats.length - visible, c + 1))
 
   return (
-    <section className="relative bg-[#0a0e1a] py-16 px-12 md:px-20 lg:px-28 overflow-hidden">
-      <img src={bgImg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-40" />
+    <section className="relative bg-white dark:bg-[#0a0e1a] py-16 px-12 md:px-20 lg:px-28 overflow-hidden">
+      <img src={bgImgLight} alt="" className="absolute inset-0 w-full h-full object-cover dark:hidden" />
+      <img src={bgImg} alt="" className="absolute inset-0 w-full h-full object-cover hidden dark:block" />
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="mb-10">
-          <h2 className="text-2xl font-semibold text-white">Building a Circular Future</h2>
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Building a Circular Future</h2>
           <p className="text-[#86a73e] font-medium mt-1">Creating Measurable Environmental Impact</p>
         </div>
 
@@ -49,7 +51,7 @@ export default function StatsSection() {
           <button
             onClick={prev}
             disabled={current === 0}
-            className="flex-shrink-0 w-10 h-10 rounded-full border border-[#1e2d3d] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#6abf4b] transition-colors disabled:opacity-30"
+            className="flex-shrink-0 w-10 h-10 rounded-full border border-gray-300 dark:border-[#1e2d3d] flex items-center justify-center text-gray-400 hover:text-gray-900 dark:hover:text-white hover:border-[#6abf4b] transition-colors disabled:opacity-30"
           >
             <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -59,7 +61,7 @@ export default function StatsSection() {
           {/* Cards */}
           <div className="flex-1 overflow-hidden">
             <div
-              className="flex divide-x-2 divide-[#1e2d3d] transition-transform duration-300"
+              className="flex divide-x-2 divide-gray-200 dark:divide-[#1e2d3d] transition-transform duration-300"
               style={{ transform: `translateX(-${current * (100 / visible)}%)` }}
             >
               {stats.map((s, i) => (
@@ -69,7 +71,7 @@ export default function StatsSection() {
                 >
                   <img src={s.img} alt={s.value} className="w-32 h-32 object-contain mx-auto" />
                   <div className="text-[#86a73e] font-bold text-lg">{s.value}</div>
-                  <p className="text-gray-400 text-sm leading-relaxed">{s.description}</p>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{s.description}</p>
                 </div>
               ))}
             </div>
@@ -79,7 +81,7 @@ export default function StatsSection() {
           <button
             onClick={next}
             disabled={current >= stats.length - visible}
-            className="flex-shrink-0 w-10 h-10 rounded-full border border-[#1e2d3d] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#6abf4b] transition-colors disabled:opacity-30"
+            className="flex-shrink-0 w-10 h-10 rounded-full border border-gray-300 dark:border-[#1e2d3d] flex items-center justify-center text-gray-400 hover:text-gray-900 dark:hover:text-white hover:border-[#6abf4b] transition-colors disabled:opacity-30"
           >
             <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

@@ -2,7 +2,7 @@ import inquiryImg from '../assets/images/inquiry/inquiry-section.png'
 
 export default function CTASection() {
   return (
-    <section className="bg-[#0a0e1a] py-16 px-12 md:px-20 lg:px-28">
+    <section className="bg-white dark:bg-[#0a0e1a] py-16 px-12 md:px-20 lg:px-28">
       <div className="max-w-7xl mx-auto">
         <div className="relative rounded-2xl overflow-hidden border border-gray-400 min-h-[180px] flex items-center">
           {/* Background image */}
