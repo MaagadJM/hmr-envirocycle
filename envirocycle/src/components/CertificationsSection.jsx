@@ -32,7 +32,7 @@ export default function CertificationsSection() {
             disabled={current === 0}
             className="flex-shrink-0 w-10 h-10 rounded-full border border-[#1e2d3d] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#6abf4b] transition-colors disabled:opacity-30"
           >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
@@ -46,7 +46,7 @@ export default function CertificationsSection() {
               {certs.map((c, i) => (
                 <div
                   key={i}
-                  className="flex-shrink-0 w-[calc(20%-13px)] bg-[#0f1623] border border-[#1e2d3d] rounded-xl p-6 flex flex-col items-center justify-center min-h-[140px] hover:border-[#6abf4b]/40 transition-colors"
+                  className="flex-shrink-0 w-[calc(20%-13px)] bg-[#0f1623] border border-gray-400 rounded-xl p-6 flex flex-col items-center justify-center min-h-[140px] hover:border-[#6abf4b]/40 transition-colors"
                 >
                   <img src={c.img} alt={c.label} className="w-full h-full object-contain" />
                 </div>

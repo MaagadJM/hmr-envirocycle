@@ -14,7 +14,7 @@ export default function Footer() {
           </a>
 
           {/* Nav links */}
-          <ul className="flex flex-col gap-3 mb-8">
+          <ul className="flex flex-col gap-3 mb-8 ml-1.5">
             {links.map((link) => (
               <li key={link}>
                 <a href="#" className="text-gray-400 hover:text-[#6abf4b] text-sm transition-colors">
@@ -25,7 +25,7 @@ export default function Footer() {
           </ul>
 
           {/* Social icons */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 ml-1.5">
             <a
               href="#"
               className="w-9 h-9 rounded bg-[#0f1623] border border-[#1e2d3d] flex items-center justify-center text-gray-400 hover:text-[#0077b5] hover:border-[#0077b5] transition-colors"
