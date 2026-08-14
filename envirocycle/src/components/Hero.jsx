@@ -2,12 +2,12 @@ import heroImg from '../assets/images/banners/main-section.png'
 
 export default function Hero() {
   return (
-    <section className="relative w-full overflow-hidden mt-20">
+    <section className="relative w-full overflow-hidden mt-20 md:h-[50vh]">
       {/* Hero image */}
       <img
         src={heroImg}
         alt="Building a Circular Economy for Assets"
-        className="w-full object-cover block"
+        className="w-full h-auto md:h-full object-cover block"
       />
 
       {/* Text overlay */}
