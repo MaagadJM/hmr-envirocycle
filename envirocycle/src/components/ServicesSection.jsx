@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import iconICT from '../assets/service-logo/ICT Asset Disposition  (ITAD R2v3).png'
-import iconAsset from '../assets/service-logo/Asset Recovery & Disposal.png'
-import iconHazardous from '../assets/service-logo/Disposal of Hazardous Waste.png'
-import iconReinstatement from '../assets/service-logo/Reinstatement & Demolition.png'
+import iconICT from '../assets/images/service-logo/ICT Asset Disposition  (ITAD R2v3).png'
+import iconAsset from '../assets/images/service-logo/Asset Recovery & Disposal.png'
+import iconHazardous from '../assets/images/service-logo/Disposal of Hazardous Waste.png'
+import iconReinstatement from '../assets/images/service-logo/Reinstatement & Demolition.png'
 
 const services = [
   {

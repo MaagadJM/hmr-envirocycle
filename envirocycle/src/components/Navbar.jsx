@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import logo from '../assets/enviro_logo_dark.png'
+import logo from '../assets/images/enviro_logo_dark.png'
 
 export default function Navbar() {
   const [darkMode, setDarkMode] = useState(true)

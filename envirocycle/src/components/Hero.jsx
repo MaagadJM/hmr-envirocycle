@@ -1,4 +1,4 @@
-import heroImg from '../assets/banners/main-section.png'
+import heroImg from '../assets/images/banners/main-section.png'
 
 export default function Hero() {
   return (
