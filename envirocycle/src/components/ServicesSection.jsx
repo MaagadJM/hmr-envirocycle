@@ -39,16 +39,16 @@ export default function ServicesSection() {
   const next = () => setCurrent((c) => Math.min(services.length - visible, c + 1))
 
   return (
-    <section className="bg-[#0a0e1a] pb-12 px-12 md:px-20 lg:px-28 flex flex-col items-center">
+    <section className="bg-white dark:bg-[#0a0e1a] pb-12 px-12 md:px-20 lg:px-28 flex flex-col items-center">
       <div className="w-full max-w-7xl">
-        <h2 className="text-2xl font-light tracking-tighter text-white py-8">Services</h2>
+        <h2 className="text-2xl font-light tracking-tighter text-gray-900 dark:text-white py-8">Services</h2>
 
         <div className="relative flex items-center gap-4">
           {/* Prev */}
           <button
             onClick={prev}
             disabled={current === 0}
-            className="flex-shrink-0 w-10 h-10 rounded-full border border-[#1e2d3d] flex items-center justify-center text-white hover:border-[#6abf4b] transition-colors disabled:opacity-30"
+            className="flex-shrink-0 w-10 h-10 rounded-full border border-gray-300 dark:border-[#1e2d3d] flex items-center justify-center text-gray-500 dark:text-white hover:border-[#6abf4b] transition-colors disabled:opacity-30"
           >
             <svg className="w-20 h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -81,7 +81,7 @@ export default function ServicesSection() {
           <button
             onClick={next}
             disabled={current >= services.length - visible}
-            className="flex-shrink-0 w-10 h-10 rounded-full border border-[#1e2d3d] flex items-center justify-center text-white hover:border-[#6abf4b] transition-colors disabled:opacity-30"
+            className="flex-shrink-0 w-10 h-10 rounded-full border border-gray-300 dark:border-[#1e2d3d] flex items-center justify-center text-gray-500 dark:text-white hover:border-[#6abf4b] transition-colors disabled:opacity-30"
           >
             <svg className="w-20 h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
