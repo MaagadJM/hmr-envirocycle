@@ -9,25 +9,25 @@ const services = [
     icon: iconICT,
     title: 'ICT ASSET DISPOSITION (ITAD R2V3)',
     description: 'Secure and compliant IT asset lifecycle management.',
-    color: '#6abf4b',
+    color: '#86a73e',
   },
   {
     icon: iconAsset,
     title: 'ASSET RECOVERY & DISPOSAL',
     description: 'Recover value through responsible asset disposition.',
-    color: '#f5a623',
+    color: '#86a73e',
   },
   {
     icon: iconHazardous,
     title: 'DISPOSAL OF HAZARDOUS WASTE',
     description: 'Licensed hazardous waste management from collection to disposal.',
-    color: '#f97316',
+    color: '#86a73e',
   },
   {
     icon: iconReinstatement,
     title: 'REINSTATEMENT & DEMOLITION',
     description: 'Fast, compliant restoration for offices, warehouses, and commercial spaces.',
-    color: '#4a9ff5',
+    color: '#86a73e',
   },
 ]
 
@@ -64,13 +64,14 @@ export default function ServicesSection() {
               {services.map((s, i) => (
                 <div
                   key={i}
-                  className="flex-shrink-0 w-[calc(25%-12px)] bg-[#0b1120] border border-white rounded-2xl px-6 py-10 flex flex-col items-center gap-5 text-center hover:border-[#6abf4b]/60 transition-colors"
+                  className="flex-shrink-0 w-[calc(25%-12px)] overflow-hidden bg-[#0b1120] border border-white rounded-2xl flex flex-col items-center gap-5 text-center hover:border-[#6abf4b]/60 transition-colors"
+                  style={{ padding: '22px 32px' }}
                 >
-                  <img src={s.icon} alt={s.title} className="w-14 h-14 object-contain" />
-                  <h3 className="text-sm font-bold leading-snug tracking-wide" style={{ color: s.color }}>
+                  <img src={s.icon} alt={s.title} className="w-26 h-26 object-contain" />
+                  <h3 className="text-sm font-bold leading-snug tracking-wide wrap-break-word w-full" style={{ color: s.color }}>
                     {s.title}
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">{s.description}</p>
+                  <p className="text-gray-400 text-sm leading-relaxed wrap-break-word w-full">{s.description}</p>
                 </div>
               ))}
             </div>
