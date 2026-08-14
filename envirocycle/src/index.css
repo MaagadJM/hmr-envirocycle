@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:is(.dark *));
+
 @theme {
   --color-green-accent: #6abf4b;
   --color-green-dark: #3d7a2a;

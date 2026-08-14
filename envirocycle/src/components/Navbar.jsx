@@ -1,17 +1,17 @@
 import { useState } from 'react'
-import logo from '../assets/images/enviro_logo_dark.png'
+import logoDark from '../assets/images/enviro_logo_dark.png'
+import logoLight from '../assets/images/enviro_logo_light.png'
 
-export default function Navbar() {
-  const [darkMode, setDarkMode] = useState(true)
+export default function Navbar({ darkMode, toggleDark }) {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0e1a]/95 backdrop-blur-sm border-b border-[#1e2d3d]">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-[#0a0e1a]/95 backdrop-blur-sm border-b border-gray-200 dark:border-[#1e2d3d]">
       <div className="w-full px-6 grid grid-cols-3 items-center h-20">
         {/* Logo */}
         <div className="flex items-center justify-center">
           <a href="#">
-            <img src={logo} alt="Envirocycle" className="h-auto w-60" />
+            <img src={darkMode ? logoDark : logoLight} alt="Envirocycle" className="h-auto w-60" />
           </a>
         </div>
 
@@ -21,7 +21,7 @@ export default function Navbar() {
             <a
               key={item}
               href="#"
-              className="text-gray-300 hover:text-white text-sm font-medium transition-colors"
+              className="text-gray-600 dark:text-gray-300 hover:text-[#0a0e1a] dark:hover:text-white text-sm font-medium transition-colors"
             >
               {item}
             </a>
@@ -31,11 +31,11 @@ export default function Navbar() {
         {/* Right side */}
         <div className="flex items-center justify-center gap-4">
           {/* Search */}
-          <div className="hidden md:flex items-center gap-2 bg-[#0f1623] border border-[#1e2d3d] rounded-full px-4 py-1.5">
+          <div className="hidden md:flex items-center gap-2 bg-gray-50 dark:bg-[#0f1623] border border-gray-200 dark:border-[#1e2d3d] rounded-full px-4 py-1.5">
             <input
               type="text"
               placeholder="Search"
-              className="bg-transparent text-sm text-gray-300 outline-none w-28 placeholder:text-gray-500"
+              className="bg-transparent text-sm text-gray-700 dark:text-gray-300 outline-none w-28 placeholder:text-gray-400 dark:placeholder:text-gray-500"
             />
             <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -44,8 +44,8 @@ export default function Navbar() {
 
           {/* Dark/Light toggle */}
           <button
-            onClick={() => setDarkMode(!darkMode)}
-            className="flex items-center bg-[#0f1623] border border-[#1e2d3d] rounded-full p-1 gap-1"
+            onClick={toggleDark}
+            className="flex items-center bg-gray-100 dark:bg-[#0f1623] border border-gray-200 dark:border-[#1e2d3d] rounded-full p-1 gap-1"
           >
             <span className={`p-1 rounded-full transition-colors ${!darkMode ? 'bg-yellow-400 text-black' : 'text-gray-400'}`}>
               <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
@@ -61,7 +61,7 @@ export default function Navbar() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden text-gray-300"
+            className="md:hidden text-gray-600 dark:text-gray-300"
             onClick={() => setMenuOpen(!menuOpen)}
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -73,9 +73,9 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[#0a0e1a] border-t border-[#1e2d3d] px-6 py-4 flex flex-col gap-4">
+        <div className="md:hidden bg-white dark:bg-[#0a0e1a] border-t border-gray-200 dark:border-[#1e2d3d] px-6 py-4 flex flex-col gap-4">
           {['Insights', 'Industries', 'Services', 'About Us'].map((item) => (
-            <a key={item} href="#" className="text-gray-300 hover:text-white text-sm font-medium">
+            <a key={item} href="#" className="text-gray-600 dark:text-gray-300 hover:text-[#0a0e1a] dark:hover:text-white text-sm font-medium">
               {item}
             </a>
           ))}
