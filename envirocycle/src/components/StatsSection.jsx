@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import bgImg from '../assets/images/environmental-impact/building-a-circular-future-background.png'
 import img14000 from '../assets/images/environmental-impact/14,000 Tonnes.png'
 import img5228 from '../assets/images/environmental-impact/5,228 Tonnes.png'
 import img8000 from '../assets/images/environmental-impact/8,000 Tonnes.png'
@@ -35,8 +36,9 @@ export default function StatsSection() {
   const next = () => setCurrent((c) => Math.min(stats.length - visible, c + 1))
 
   return (
-    <section className="bg-[#0a0e1a] py-16 px-12 md:px-20 lg:px-28">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative bg-[#0a0e1a] py-16 px-12 md:px-20 lg:px-28 overflow-hidden">
+      <img src={bgImg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-40" />
+      <div className="relative z-10 max-w-7xl mx-auto">
         <div className="mb-10">
           <h2 className="text-2xl font-semibold text-white">Building a Circular Future</h2>
           <p className="text-[#86a73e] font-medium mt-1">Creating Measurable Environmental Impact</p>

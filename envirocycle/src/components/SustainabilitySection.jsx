@@ -1,10 +1,11 @@
 import { useState } from 'react'
+import canonEnviro from '../assets/images/sustainability/canon_enviro.jpg'
 
 const slides = [
   {
     title: 'Sustainability in Action',
     body: 'Envirocycle teamed up with Canon Philippines for an E-Bin launch and e-waste awareness session—making it easier to dispose of electronics responsibly.',
-    img: null,
+    img: canonEnviro,
   },
   {
     title: 'Responsible E-Waste Collection',
@@ -39,12 +40,12 @@ export default function SustainabilitySection() {
   return (
     <section className="bg-[#0d1220] py-16 px-12 md:px-20 lg:px-28">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center gap-8 min-h-[280px]">
+        <div className="grid grid-cols-2 gap-8 min-h-[280px]">
           {/* Text */}
-          <div className="flex-1">
+          <div className="flex flex-col justify-center">
             <h2 className="text-2xl font-semibold text-white mb-4">{slide.title}</h2>
             <p className="text-gray-400 leading-relaxed mb-6 max-w-lg">{slide.body}</p>
-            <button className="flex items-center gap-2 border border-gray-500 text-white text-sm px-5 py-2 rounded-full hover:border-[#6abf4b] hover:text-[#6abf4b] transition-colors">
+            <button className="w-fit flex items-center gap-2 border border-gray-500 text-white text-sm px-5 py-2 rounded-full hover:border-[#6abf4b] hover:text-[#6abf4b] transition-colors">
               Read more
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -52,14 +53,12 @@ export default function SustainabilitySection() {
             </button>
           </div>
 
-          {/* Image placeholder */}
-          <div className="flex-shrink-0 w-full md:w-80 h-52 rounded-xl bg-[#0f1623] border border-[#1e2d3d] flex items-center justify-center overflow-hidden">
-            <div className="flex flex-col items-center gap-2 text-gray-600">
-              <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              <span className="text-xs">Event Photo</span>
-            </div>
+          {/* Image */}
+          <div className="w-full h-80 rounded-xl overflow-hidden border border-[#1e2d3d]">
+            {slide.img
+              ? <img src={slide.img} alt={slide.title} className="w-full h-full object-cover" />
+              : <div className="w-full h-full bg-[#0f1623] flex items-center justify-center text-gray-600 text-xs">Event Photo</div>
+            }
           </div>
         </div>
 
