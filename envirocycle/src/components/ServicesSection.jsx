@@ -64,14 +64,14 @@ export default function ServicesSection() {
               {services.map((s, i) => (
                 <div
                   key={i}
-                  className="flex-shrink-0 w-[calc(25%-12px)] overflow-hidden bg-[#0b1120] border border-gray-500 rounded-2xl flex flex-col items-center gap-5 text-center hover:border-[#6abf4b]/60 transition-colors"
+                  className="flex-shrink-0 w-[calc(25%-12px)] overflow-hidden bg-gray-100 dark:bg-[#0b1120] border border-gray-300 dark:border-gray-500 rounded-2xl flex flex-col items-center gap-5 text-center hover:border-[#6abf4b]/60 transition-colors"
                   style={{ padding: '22px 32px' }}
                 >
-                  <img src={s.icon} alt={s.title} className="w-26 h-26 object-contain" />
+                  <img src={s.icon} alt={s.title} className="w-26 h-26 object-contain invert dark:invert-0" />
                   <h3 className="text-sm font-bold leading-snug tracking-wide wrap-break-word w-full" style={{ color: s.color }}>
                     {s.title}
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed wrap-break-word w-full">{s.description}</p>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed wrap-break-word w-full">{s.description}</p>
                 </div>
               ))}
             </div>
