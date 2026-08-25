@@ -2,7 +2,14 @@ import { useState } from 'react'
 import logoDark from '../assets/images/enviro_logo_dark.png'
 import logoLight from '../assets/images/enviro_logo_light.png'
 
-export default function Navbar({ darkMode, toggleDark }) {
+const navLinks = [
+  { label: 'Insights', page: null },
+  { label: 'Industries', page: null },
+  { label: 'Services', page: null },
+  { label: 'About Us', page: 'about' },
+]
+
+export default function Navbar({ darkMode, toggleDark, currentPage, navigate }) {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
@@ -17,14 +24,18 @@ export default function Navbar({ darkMode, toggleDark }) {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center justify-center gap-8">
-          {['Insights', 'Industries', 'Services', 'About Us'].map((item) => (
-            <a
-              key={item}
-              href="#"
-              className="text-gray-600 dark:text-gray-300 hover:text-[#0a0e1a] dark:hover:text-white text-sm font-medium transition-colors"
+          {navLinks.map(({ label, page }) => (
+            <button
+              key={label}
+              onClick={() => navigate(page ?? 'home')}
+              className={`text-sm font-medium transition-colors ${
+                currentPage === (page ?? 'home')
+                  ? 'text-[#6abf4b] font-semibold'
+                  : 'text-gray-600 dark:text-gray-300 hover:text-[#0a0e1a] dark:hover:text-white'
+              }`}
             >
-              {item}
-            </a>
+              {label}
+            </button>
           ))}
         </div>
 
@@ -74,10 +85,18 @@ export default function Navbar({ darkMode, toggleDark }) {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden bg-white dark:bg-[#0a0e1a] border-t border-gray-200 dark:border-[#1e2d3d] px-6 py-4 flex flex-col gap-4">
-          {['Insights', 'Industries', 'Services', 'About Us'].map((item) => (
-            <a key={item} href="#" className="text-gray-600 dark:text-gray-300 hover:text-[#0a0e1a] dark:hover:text-white text-sm font-medium">
-              {item}
-            </a>
+          {navLinks.map(({ label, page }) => (
+            <button
+              key={label}
+              onClick={() => { navigate(page ?? 'home'); setMenuOpen(false) }}
+              className={`text-sm font-medium text-left transition-colors ${
+                currentPage === (page ?? 'home')
+                  ? 'text-[#6abf4b] font-semibold'
+                  : 'text-gray-600 dark:text-gray-300 hover:text-[#0a0e1a] dark:hover:text-white'
+              }`}
+            >
+              {label}
+            </button>
           ))}
         </div>
       )}
