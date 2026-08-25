@@ -2,7 +2,7 @@ import logoDark from '../assets/images/enviro_logo_dark.png'
 import logoLight from '../assets/images/enviro_logo_light.png'
 
 export default function Footer() {
-  const links = ['About Us', 'Services', 'Industries', 'Insights', 'Career']
+  const links = ['About Us', 'Services', 'Industries', 'Insights', 'FAQs']
 
   return (
     <footer className="bg-gray-50 dark:bg-[#0a0e1a] border-t border-gray-200 dark:border-[#1e2d3d] py-10 px-4 sm:px-8 md:px-20 lg:px-28">

@@ -7,6 +7,7 @@ const navLinks = [
   { label: 'Industries', page: null },
   { label: 'Services', page: null },
   { label: 'About Us', page: 'about' },
+  { label: 'FAQs', page: 'faqs' },
 ]
 
 export default function Navbar({ darkMode, toggleDark, currentPage, navigate }) {
