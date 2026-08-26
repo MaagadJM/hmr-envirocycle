@@ -85,23 +85,28 @@ export default function AboutPage() {
 
       {/* Our Mission & Vision */}
       <div className="px-8 py-16 md:px-20 lg:px-28 bg-[#0a0e1a]">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div>
-            <h2 className="text-white text-3xl md:text-5xl font-semibold mb-6">Our Mission</h2>
+        <div className="relative min-h-105">
+
+          {/* Mission — top left, 60% wide */}
+          <div className="absolute top-0 left-0 w-[60%]">
+            <h2 className="text-white text-3xl md:text-5xl font-semibold mb-4">Our Mission</h2>
             <div className="bg-[#122447] p-6 rounded-lg">
               <p className="text-gray-300 text-sm md:text-base leading-relaxed">
                 Envirocycle Philippines, Inc. (EPI) is and well organized by its stake holder as the leading provider of the comprehensive asset management services, handling excess and obsolete industrial and consumer electronics in an environmentally safe manner.
               </p>
             </div>
           </div>
-          <div>
-            <h2 className="text-white text-3xl md:text-5xl font-semibold mb-6">Our Vision</h2>
-            <div className="bg-[#122447] p-6 rounded-lg">
+
+          {/* Vision — same top as Mission, right side, z on top */}
+          <div className="absolute top-30 right-0 w-[60%] z-10">
+            <h2 className="text-white text-3xl md:text-5xl font-semibold ml-80 mb-4">Our Vision</h2>
+            <div className="bg-[#4971c0] p-6 rounded-lg">
               <p className="text-gray-300 text-sm md:text-base leading-relaxed">
                 Envirocycle Philippines, Inc. (EPI) envision ourselves as one-stop-shop provider of environmentally-safe waste management technologies not only in the field of e-waste but in other aspects of waste solution. We will, continually innovate, improve our methodologies, and adapt technological changes that improve our capabilities and efficiencies, limiting environmental impact.
               </p>
             </div>
           </div>
+
         </div>
       </div>
 
