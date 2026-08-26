@@ -68,7 +68,7 @@ export default function AboutPage() {
 
       {/* Who We Are */}
       <div className="px-8 py-16 md:px-20 lg:px-28 bg-[#0a0e1a]">
-        <h2 className="text-white text-3xl md:text-5xl font-semibold mb-10">Who We Are</h2>
+        <h2 className="text-white font-extralight leading-tight tracking-tighter text-3xl md:text-5xl mb-10">Who We Are</h2>
         <div className="relative grid grid-cols-2 items-stretch">
           <div className="bg-white dark:bg-[#0a0e1a]" />
           <img src={whoWeAreImg} alt="Who We Are" className="w-full h-full object-cover block" />
@@ -88,21 +88,21 @@ export default function AboutPage() {
         <div className="relative min-h-105">
 
           {/* Mission — top left, 60% wide */}
-          <div className="absolute top-0 left-0 w-[60%]">
-            <h2 className="text-white text-3xl md:text-5xl font-semibold mb-4">Our Mission</h2>
+          <div className="absolute top-0 left-0 w-[55%]">
+            <h2 className="text-white font-extralight leading-tight tracking-tighter text-3xl md:text-5xl mb-4">Our Mission</h2>
             <div className="bg-[#122447] p-6 rounded-lg">
-              <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-                Envirocycle Philippines, Inc. (EPI) is and well organized by its stake holder as the leading provider of the comprehensive asset management services, handling excess and obsolete industrial and consumer electronics in an environmentally safe manner.
+              <p className="text-gray-300 text-sm md:text-lg leading-relaxed">
+                Envirocycle Philippines, Inc. (EPI) is and well <br /> organized by its stake holder as the leading provider <br /> of the comprehensive asset management services, <br /> handling excess and obsolete industrial and consumer <br /> electronics in an environmentally safe manner.
               </p>
             </div>
           </div>
 
           {/* Vision — same top as Mission, right side, z on top */}
-          <div className="absolute top-30 right-0 w-[60%] z-10">
-            <h2 className="text-white text-3xl md:text-5xl font-semibold ml-80 mb-4">Our Vision</h2>
+          <div className="absolute top-30 right-0 w-[55%] z-10">
+            <h2 className="text-white font-extralight leading-tight tracking-tighter text-3xl md:text-5xl ml-80 mb-4">Our Vision</h2>
             <div className="bg-[#4971c0] p-6 rounded-lg">
-              <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-                Envirocycle Philippines, Inc. (EPI) envision ourselves as one-stop-shop provider of environmentally-safe waste management technologies not only in the field of e-waste but in other aspects of waste solution. We will, continually innovate, improve our methodologies, and adapt technological changes that improve our capabilities and efficiencies, limiting environmental impact.
+              <p className="text-gray-300 text-right text-sm md:text-lg leading-relaxed">
+                Envirocycle Philippines, Inc. (EPI) envision ourselves as <br /> one-stop-shop provider of environmentally-safe waste <br /> management technologies not only in the fiel of e-waste but <br /> in other aspects of waste solution. We will, continually innovate, <br /> improve our methodologies, and adapt technological changes <br /> that improve our capabilities and efficiencies, <br /> limiting environmental impact.
               </p>
             </div>
           </div>
