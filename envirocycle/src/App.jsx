@@ -10,6 +10,7 @@ import CTASection from './components/CTASection'
 import Footer from './components/Footer'
 import AboutPage from './pages/AboutPage'
 import FAQsPage from './pages/FAQsPage'
+import IndustriesPage from './pages/IndustriesPage'
 
 function App() {
   const [darkMode, setDarkMode] = useState(false)
@@ -30,6 +31,7 @@ function App() {
       )}
       {page === 'about' && <AboutPage />}
       {page === 'faqs' && <FAQsPage />}
+      {page === 'industries' && <IndustriesPage />}
       <Footer />
     </div>
   )

@@ -4,7 +4,7 @@ import logoLight from '../assets/images/enviro_logo_light.png'
 
 const navLinks = [
   { label: 'Insights', page: null },
-  { label: 'Industries', page: null },
+  { label: 'Industries', page: 'industries' },
   { label: 'Services', page: null },
   { label: 'About Us', page: 'about' },
   { label: 'FAQs', page: 'faqs' },
