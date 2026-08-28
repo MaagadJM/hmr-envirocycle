@@ -4,6 +4,81 @@ import iconRegulatory from '../assets/images/icons/industries-icons/industries-r
 import iconWaste from '../assets/images/icons/industries-icons/industries-waste-reduction.png'
 import iconAsset from '../assets/images/icons/industries-icons/industries-asset-value-recovery.png'
 import iconESG from '../assets/images/icons/industries-icons/industries-esg-sustainability.png'
+import imgIT from '../assets/images/icons/industries-icons/information-technology-it.png'
+import imgPublicSector from '../assets/images/icons/industries-icons/public-sector.png'
+import imgFMCG from '../assets/images/icons/industries-icons/fmcg.png'
+import imgAutomotive from '../assets/images/icons/industries-icons/automotive.png'
+import imgTelecommunications from '../assets/images/icons/industries-icons/telecommunications.png'
+import imgManufacturing from '../assets/images/icons/industries-icons/manufacturing.png'
+import imgMining from '../assets/images/icons/industries-icons/mining.png'
+import imgEnergy from '../assets/images/icons/industries-icons/energy.png'
+import imgHealthcare from '../assets/images/icons/industries-icons/healthcare.png'
+import imgRetail from '../assets/images/icons/industries-icons/retail.png'
+import imgBanking from '../assets/images/icons/industries-icons/banking-fintech.png'
+import imgBPO from '../assets/images/icons/industries-icons/business-process-outsourcing-bpo.png'
+
+const industriesItems = [
+  {
+    img: imgIT,
+    name: 'Information Technology (IT)',
+    desc: 'Technology evolves quickly, making responsible IT asset management essential. We help organizations securely manage retired IT equipment through refurbishment, IT Asset Disposition (ITAD), asset recovery, and responsible electronics recycling.',
+  },
+  {
+    img: imgPublicSector,
+    name: 'Public Sector',
+    desc: 'Government agencies require transparent, compliant, and environmentally responsible asset and waste management solutions. Envirocycle supports public sector organizations through secure ITAD, hazardous waste management, electronics refurbishment, and sustainability reporting.',
+  },
+  {
+    img: imgFMCG,
+    name: 'FMCG',
+    desc: 'Fast-moving consumer goods companies generate significant volumes of packaging materials, surplus assets, and production waste. Our circular economy solutions help improve resource recovery while supporting sustainability commitments.',
+  },
+  {
+    img: imgAutomotive,
+    name: 'Automotive',
+    desc: 'From manufacturing operations to end-of-life materials, the automotive industry benefits from responsible resource recovery, hazardous waste management, reverse logistics, and supply chain sustainability initiatives.',
+  },
+  {
+    img: imgTelecommunications,
+    name: 'Telecommunications',
+    desc: 'As network infrastructure evolves, telecommunications providers require secure management of retired equipment and responsible recovery of valuable materials. Envirocycle supports asset recovery, ITAD, and electronics refurbishment throughout the technology lifecycle.',
+  },
+  {
+    img: imgManufacturing,
+    name: 'Manufacturing',
+    desc: 'Manufacturers face increasing pressure to reduce waste, improve resource efficiency, and meet sustainability objectives. We help recover secondary-grade materials, manage hazardous waste, optimize reverse logistics, and support ESG initiatives.',
+  },
+  {
+    img: imgMining,
+    name: 'Mining',
+    desc: 'Mining operations generate complex waste streams and retire significant volumes of industrial equipment. Envirocycle provides responsible asset recovery, hazardous waste management, and material recovery solutions that support environmental compliance.',
+  },
+  {
+    img: imgEnergy,
+    name: 'Energy',
+    desc: 'Energy companies continue to invest in cleaner and more sustainable operations. Envirocycle helps manage retired assets, hazardous waste, and material recovery while supporting environmental reporting and sustainability programs.',
+  },
+  {
+    img: imgBanking,
+    name: 'Banking & Fintech',
+    desc: 'Financial institutions regularly refresh technology infrastructure and manage sensitive information. Our secure IT Asset Disposition services help protect data while maximizing the value of retired technology assets.',
+  },
+  {
+    img: imgHealthcare,
+    name: 'Healthcare',
+    desc: 'Hospitals, laboratories, and healthcare providers require careful management of technology assets and regulated waste. Envirocycle delivers responsible environmental solutions that support compliance and operational efficiency.',
+  },
+  {
+    img: imgRetail,
+    name: 'Retail',
+    desc: 'Retail businesses manage large networks of stores, point-of-sale systems, and technology assets. We support responsible asset recovery, electronics refurbishment, reverse logistics, and sustainability initiatives across multiple locations.',
+  },
+  {
+    img: imgBPO,
+    name: 'Business Process Outsourcing (BPO)',
+    desc: 'BPO companies depend on large volumes of IT equipment to support daily operations. Envirocycle helps organizations securely retire, refurbish, and recover technology assets while supporting ESG and sustainability goals.',
+  },
+]
 
 const challengeItems = [
   {
@@ -103,6 +178,26 @@ export default function IndustriesPage() {
               </div>
             ))}
           </div>
+        </div>
+      </div>
+
+      {/* Industries We Support */}
+      <div className="px-8 py-16 md:px-20 lg:px-28 bg-white dark:bg-navy">
+        <h2 className="text-gray-900 dark:text-white font-extralight leading-tight tracking-tighter text-3xl md:text-4xl mb-10">
+          Industries We Support
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {industriesItems.map(({ img, name, desc }) => (
+            <div key={name} className="flex flex-col">
+              <div className="relative">
+                <img src={img} alt={name} className="w-full h-44 object-cover block" />
+                <div className="absolute -bottom-5 left-0 bg-green-accent w-[80%] px-3 py-2">
+                  <p className="text-white text-md font-semibold leading-snug">{name}</p>
+                </div>
+              </div>
+              <p className="text-gray-500 dark:text-gray-400 text-xs leading-relaxed mt-8">{desc}</p>
+            </div>
+          ))}
         </div>
       </div>
 
