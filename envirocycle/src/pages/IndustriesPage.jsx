@@ -1,4 +1,5 @@
 import heroBanner from '../assets/images/banners/industries/industries-main-banner.png'
+import lastSectionBanner from '../assets/images/banners/industries/industries-last-section-banner.png'
 import bgChallengeDark from '../assets/images/environmental-impact/building-a-circular-future-background.png'
 import iconRegulatory from '../assets/images/icons/industries-icons/industries-regulatory-compliance.png'
 import iconWaste from '../assets/images/icons/industries-icons/industries-waste-reduction.png'
@@ -198,6 +199,27 @@ export default function IndustriesPage() {
               <p className="text-gray-500 dark:text-gray-400 text-xs leading-relaxed mt-8">{desc}</p>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* Partnering Across Industries - CTA Banner */}
+      <div className="px-8 py-16 md:px-20 lg:px-28 bg-white dark:bg-[#0a0e1a]">
+        <div className="relative rounded-2xl overflow-hidden px-10 py-12 md:px-16 md:py-14 [box-shadow:10px_10px_30px_rgba(0,0,0,0.25),-10px_-10px_30px_rgba(255,255,255,1)] dark:[box-shadow:8px_8px_20px_rgba(0,0,0,0.6),-8px_-8px_20px_rgba(255,255,255,0.05)]">
+          <img src={lastSectionBanner} alt="" className="absolute inset-0 w-full h-full object-cover" />
+          <div className="relative z-10 max-w-[55%]">
+            <h2 className="text-white font-extralight leading-tight tracking-tighter text-2xl md:text-4xl mb-4">
+              Partnering Across Industries for a More Sustainable Future
+            </h2>
+            <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-4">
+              Every organization faces unique environmental and operational challenges, but the objective remains the same reducing waste, recovering value, and operating more sustainably.
+            </p>
+            <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-8">
+              Whether you're managing a nationwide enterprise, a manufacturing facility, a healthcare network, or a growing technology company, Envirocycle provides practical environmental solutions tailored to your industry's needs. Together, we help businesses strengthen compliance, improve resource efficiency, and build a more sustainable future.
+            </p>
+            <button className="border border-white text-white text-sm px-6 py-2.5 rounded-full hover:bg-white hover:text-navy transition-colors">
+              Talk to our Team
+            </button>
+          </div>
         </div>
       </div>
 
